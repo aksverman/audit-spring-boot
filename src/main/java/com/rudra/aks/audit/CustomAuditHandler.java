@@ -6,6 +6,7 @@ package com.rudra.aks.audit;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.audit4j.core.dto.AuditEvent;
 import org.audit4j.core.exception.HandlerException;
 import org.audit4j.core.exception.InitializationException;
 import org.audit4j.core.handler.Handler;
@@ -46,7 +47,12 @@ public class CustomAuditHandler extends Handler {
 		messages.put("_AuditTimeStamp", getAuditEvent().getTimestamp());
 		messages.put("_AuditUUID", getAuditEvent().getUuid());
 		
-		logger.info("audit", messages);
+		logger.info(messages.toString());
+		AuditEvent event = getAuditEvent();
+		/*logger.info("audit", event.getAuditId() + " "
+							+ event.getActor() + " "
+							+ event.getAction() + " "
+							+ event.getTimestamp());*/
 	}
 
 	
