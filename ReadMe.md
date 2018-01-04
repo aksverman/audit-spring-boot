@@ -1,13 +1,15 @@
 #Simple Audit 4j with Spring Boot
-To run the application:
+To run the application, Run the TestCase #AuditTest or follow :
 
     1. Run the AuditMainApp as Java Application
     
-    2. Send a rest call to http://localhost:8088/test/{uuid}/{username}    - replace uuid & username with proper values
+    2. Send a rest call to http://localhost:8088/test/{uuid}/{username}   
+       -- replace {uuid} & {username} with proper values
     
     3. Observe the logs in log file at root folder for audit events;
     
-	4. CustomAuditHandler is a handler set in audit4j.conf.yml. It will act along with other audit handler which are ConsoleHandler & FileHandler. 
+	4. CustomAuditHandler is a handler set in audit4j.conf.yml. 
+	   It will act along with other audit handler which are ConsoleHandler & FileHandler. 
 	
 	5. CustomAuditHandler will collect logs and will render in console only. 
 	
